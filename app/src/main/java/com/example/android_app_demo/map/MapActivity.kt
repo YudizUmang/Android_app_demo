@@ -7,6 +7,8 @@ import android.graphics.BitmapFactory
 import android.location.Geocoder
 import android.location.Location
 import android.os.Bundle
+import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -28,12 +30,15 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var myMap: GoogleMap
     private lateinit var supportMapFragment: SupportMapFragment
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var loading: ProgressBar
 //    private lateinit var latLng: LatLng
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_map)
+        loading = findViewById(R.id.map_loading)
+        loading.visibility = View.VISIBLE
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         supportMapFragment =
             supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
@@ -126,6 +131,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     override fun onMapReady(p0: GoogleMap) {
+        loading.visibility = View.GONE
         myMap = p0
 
         getLastLocation()
