@@ -4,17 +4,20 @@ plugins {
     id("kotlin-kapt")
     id("com.google.gms.google-services")
 }
+val mapsApiKey: String? = project.findProperty("MAPS_API_KEY") as String?
 
 android {
     namespace = "com.example.android_app_demo"
     compileSdk = 34
 
     defaultConfig {
+
         applicationId = "com.example.android_app_demo"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        manifestPlaceholders["mapsApiKey"] = mapsApiKey ?: ""
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

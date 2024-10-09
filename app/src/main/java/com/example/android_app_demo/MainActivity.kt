@@ -45,6 +45,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+
         setContentView(R.layout.activity_main)
         val basic_ui_btn = findViewById<Button>(R.id.basic_ui)
         val constraint_layout_btn = findViewById<Button>(R.id.constraint_layout)

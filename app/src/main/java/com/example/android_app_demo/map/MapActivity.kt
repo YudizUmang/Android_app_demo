@@ -31,7 +31,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var supportMapFragment: SupportMapFragment
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var loading: ProgressBar
-//    private lateinit var latLng: LatLng
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +74,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                             .position(latLng)
                             .icon(
                                 BitmapDescriptorFactory.fromBitmap(
-
                                     bitmapSizeByScall(
                                         BitmapFactory.decodeResource(
                                             getResources(),
@@ -120,7 +118,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    fun bitmapSizeByScall(bitmapIn: Bitmap, scall_zero_to_one_f: Float): Bitmap {
+    private fun bitmapSizeByScall(bitmapIn: Bitmap, scall_zero_to_one_f: Float): Bitmap {
         val bitmapOut = Bitmap.createScaledBitmap(
             bitmapIn,
             Math.round(bitmapIn.width * scall_zero_to_one_f),

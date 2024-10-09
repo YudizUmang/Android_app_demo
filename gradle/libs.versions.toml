@@ -5,6 +5,7 @@ avatarviewCoil = "1.0.4"
 coilGif = "2.7.0"
 core = "2.2.0"
 coreKtxVersion = "1.13.1"
+dotenvJava = "6.2.2"
 firebaseBom = "33.4.0"
 glide = "4.16.0"
 kotlin = "1.9.0"
@@ -44,6 +45,7 @@ androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version
 avatarview-coil = { module = "io.getstream:avatarview-coil", version.ref = "avatarviewCoil" }
 coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coilGif" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+dotenv-java = { module = "io.github.cdimascio:dotenv-java", version.ref = "dotenvJava" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
