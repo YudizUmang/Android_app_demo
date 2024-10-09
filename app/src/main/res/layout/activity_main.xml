@@ -218,5 +218,13 @@
             android:layout_margin="5dp"
             android:text="Map" />
 
+
+        <Button
+            android:id="@+id/data_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Data Binding" />
+
     </LinearLayout>
 </ScrollView>

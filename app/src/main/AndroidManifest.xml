@@ -19,6 +19,9 @@
         android:theme="@style/Theme.Android_app_demo"
         tools:targetApi="31">
         <activity
+            android:name=".data_binding.DataBinding"
+            android:exported="false" />
+        <activity
             android:name=".map.MapActivity"
             android:exported="false" />
         <activity

@@ -107,5 +107,6 @@
     <string name="dark_mode_text">Dark Mode</string>
     <string name="system_theme_text">System Theme</string>
     <string name="load_webview_text">Load Webview</string>
+    <string name="calculate_age_text">Calculate Age</string>
 
 </resources>

@@ -17,6 +17,7 @@ import com.example.android_app_demo.coroutine.Demo1
 import com.example.android_app_demo.coroutine.Demo2
 import com.example.android_app_demo.coroutine.Demo3
 import com.example.android_app_demo.coroutine.Demo4
+import com.example.android_app_demo.data_binding.DataBinding
 import com.example.android_app_demo.dialogs.AddUser
 import com.example.android_app_demo.fab_snackbar.FabSnackMain
 import com.example.android_app_demo.fontdemo.FontMain
@@ -77,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         val workManager2 = findViewById<Button>(R.id.workmanager_2)
         val theme_btn = findViewById<Button>(R.id.theme_btn)
         val map_btn = findViewById<Button>(R.id.map_btn)
+        val data_btn = findViewById<Button>(R.id.data_btn)
 
         sharedPref = applicationContext.getSharedPreferences("MyTheme", 0)
 
@@ -291,6 +293,10 @@ class MainActivity : AppCompatActivity() {
 
         theme_btn.setOnClickListener {
             startActivity(Intent(this, ChangeTheme::class.java))
+        }
+
+        data_btn.setOnClickListener {
+            startActivity(Intent(this, DataBinding::class.java))
         }
     }
 }
