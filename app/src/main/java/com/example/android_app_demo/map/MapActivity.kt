@@ -3,7 +3,7 @@ package com.example.android_app_demo.map
 import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
+import android.graphics.BitmapFactory
 import android.location.Geocoder
 import android.location.Location
 import android.os.Bundle
@@ -28,6 +28,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var myMap: GoogleMap
     private lateinit var supportMapFragment: SupportMapFragment
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+//    private lateinit var latLng: LatLng
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,13 +70,17 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                             .position(latLng)
                             .icon(
                                 BitmapDescriptorFactory.fromBitmap(
+
                                     bitmapSizeByScall(
-                                        (R.drawable.location as BitmapDrawable).bitmap,
-                                        0.8f
+                                        BitmapFactory.decodeResource(
+                                            getResources(),
+                                            R.drawable.location
+                                        ), 0.1f
                                     )
                                 )
                             )
                     )
+
 
                     myMap.setOnMarkerClickListener {
                         val geocoder = Geocoder(this, Locale.getDefault())
@@ -88,11 +93,25 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                     }
                 }
             }
-            myMap.setOnMapLongClickListener {
 
-            }
-
-
+            myMap.setOnMapLongClickListener(GoogleMap.OnMapLongClickListener { latLng ->
+                myMap.clear()
+                myMap.animateCamera(CameraUpdateFactory.newLatLng(latLng))
+                myMap.addMarker(
+                    MarkerOptions()
+                        .position(latLng)
+                        .icon(
+                            BitmapDescriptorFactory.fromBitmap(
+                                bitmapSizeByScall(
+                                    BitmapFactory.decodeResource(
+                                        getResources(),
+                                        R.drawable.location
+                                    ), 0.1f
+                                )
+                            )
+                        )
+                )
+            })
         }
     }
 
