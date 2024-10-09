@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">Android_app_demo</string>
+    <string name="background_image_header">Background Image Header</string>
+    <string name="job_application">JOB APPLICATION</string>
+    <string name="company">Think Labs, Rajkot</string>
+    <string name="company_number">9173135834</string>
+    <string name="company_email">hr@think.labs</string>
+    <string name="enter_name_form">Enter name</string>
+    <string name="text_surname">Enter Surname</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="enter_dob_text">Enter DOB</string>
+    <string name="text_city">City</string>
+    <string name="text_email">Email</string>
+    <string name="experience_in_year_text">Experience in Year</string>
+    <string name="company_terms"><![CDATA[By checking this you are agreeing with companies Terms & Conditions.]]></string>
+    <string name="submit_btn">SUBMIT</string>
+    <string name="text_password">Password</string>
+    <string name="enter_valid_number">Enter valid number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="search_fragment_text">Search by Name</string>
+    <string name="gujarati_jalebi_fafda">Jalebi Fafda</string>
+    <string name="italian_pizza">Pizza</string>
+    <string name="italian_alfredo_pasta">Alfredo Pasta</string>
+    <string name="south_dosa">Dosa</string>
+    <string name="south_idali">Idli</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="default_notification_channel_id">mynotification</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="info_text">Info</string>
+    <string name="create_new_text">Create New</string>
+    <string name="save_text">Save</string>
+    <string name="home_text">Home</string>
+    <string name="search_text">Search</string>
+    <string name="profile_text">Profile</string>
+    <string name="text_add_user">ADD USER</string>
+    <string name="text_name">Name</string>
+    <string name="text_last_name">Last Name</string>
+    <string name="text_date_of_birth">Date of Birth</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment1_1">Hello Home fragment 1</string>
+    <string name="fragment1_2">Hello Home fragment 2</string>
+    <string name="open_mail_text">Open Mail</string>
+    <string name="current_location_text">Current Location</string>
+    <string name="open_other_app_text">Open other app</string>
+    <string name="coil_text">Coil</string>
+    <string name="glide_text">Glide</string>
+    <string name="load_image_text">Load Image</string>
+    <string name="load_gif_text">Load GIF</string>
+    <string name="enter_description_text">Enter Description</string>
+    <string name="show_all_text">Show all</string>
+    <string name="edit_text">EDIT</string>
+    <string name="delete_text">DELETE</string>
+    <string name="get_users_text">Get Users</string>
+    <string name="add_user_text">Add User</string>
+    <string name="company_name_text">Company Name</string>
+    <string name="age_text">Age</string>
+    <string name="image_url_text">Image Url</string>
+    <string name="enter_first_number_text">Enter first number</string>
+    <string name="enter_second_number_text">Enter second number</string>
+    <string name="enter_a_number_text">Enter a number</string>
+    <string name="calculate_text">Calculate</string>
+    <string name="sleep_time_in_seconds_text">Sleep time in Seconds:</string>
+    <string name="enter_sleep_time_in_seconds_text">Enter Sleep time in Seconds</string>
+    <string name="run_async_task_text">Run Async task</string>
+    <string name="do_work_text">Do Work</string>
+    <string name="light_mode_text">Light Mode</string>
+    <string name="dark_mode_text">Dark Mode</string>
+    <string name="system_theme_text">System Theme</string>
+    <string name="load_webview_text">Load Webview</string>
+
+</resources>

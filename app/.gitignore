@@ -1,0 +1,36 @@
+# Built application files
+*.apk
+*.ap_
+*.dex
+*.class
+
+# Java class files
+*.class
+
+# Gradle files
+.gradle/
+build/
+*/build/
+*/captures/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Android Studio files
+.idea/
+*.iml
+
+# Kotlin specific
+*.kotlin_module
+
+# NDK
+obj/
+*.so
+
+# Other files
+*.log
+*.jar
+*.war
+*.ear
+*.db
+*.hprof

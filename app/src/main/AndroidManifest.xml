@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.example.permissiondemo.permission.ACCESS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Android_app_demo"
+        tools:targetApi="31">
+        <activity
+            android:name=".map.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".theme.WebLoad"
+            android:exported="false" />
+        <activity
+            android:name=".theme.ChangeTheme"
+            android:exported="false" />
+        <activity
+            android:name=".workmanager.Upload"
+            android:exported="false"
+            android:theme="@style/Theme.Android_app_demo" />
+        <activity
+            android:name=".workmanager.NetworkCharge"
+            android:exported="false"
+            android:theme="@style/Theme.Android_app_demo" />
+        <activity
+            android:name=".notification.NotificationData"
+            android:exported="true" />
+
+        <service
+            android:name=".notification.CreateNotification"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/baseline_assistant_photo_24" />
+        </service>
+
+        <activity
+            android:name=".coroutine.Demo4"
+            android:exported="false" />
+        <activity
+            android:name=".coroutine.Demo3"
+            android:exported="false" />
+        <activity
+            android:name=".coroutine.Demo2"
+            android:exported="false" />
+        <activity
+            android:name=".coroutine.Demo1"
+            android:exported="false" />
+        <activity
+            android:name=".retrofit.UserMain"
+            android:exported="false" />
+        <activity
+            android:name=".room.ToDoAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".room.ToDoList"
+            android:exported="false" />
+        <activity
+            android:name=".room.ToDoMain"
+            android:exported="false" />
+        <activity
+            android:name=".coil_glide.ImageLoad"
+            android:exported="false" />
+        <activity
+            android:name=".webview.WebViewMain"
+            android:exported="false" />
+        <activity
+            android:name=".permissions.PermissionMain"
+            android:exported="false" />
+        <activity
+            android:name=".intent_filter.IntentFilterMain"
+            android:exported="true">
+            <intent-filter
+                android:icon="@mipmap/logo"
+                android:label="Temp">
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EncryptedSharedPref.EncryptedSharedLogOut"
+            android:exported="false" />
+        <activity
+            android:name=".EncryptedSharedPref.EncryptedSharedMain"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.FragmentMain"
+            android:exported="false" />
+        <activity
+            android:name=".shared_preferences.SharedLogOut"
+            android:exported="false" />
+        <activity
+            android:name=".shared_preferences.SharedMain"
+            android:exported="false" />
+        <activity
+            android:name=".activity_result.EditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_result.MainActivityProfile"
+            android:exported="false" />
+        <activity
+            android:name=".dialogs.AddUser"
+            android:exported="false" />
+        <activity
+            android:name=".menu.MenuDemo"
+            android:exported="false" />
+        <activity
+            android:name=".fontdemo.FontMain"
+            android:exported="false" />
+        <activity
+            android:name=".fab_snackbar.FabSnackMain"
+            android:exported="false" />
+        <activity
+            android:name=".coordinatelayout.CoordinateMain"
+            android:exported="false" />
+        <activity
+            android:name=".viewpager_tab.recipe.RecipeMain"
+            android:exported="false" />
+        <activity
+            android:name=".shape_and_selector.ShapeAndSelector"
+            android:exported="false" />
+        <activity
+            android:name=".form.FormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".basic_ui.SecondScreen"
+            android:exported="false" />
+        <activity
+            android:name=".basic_ui.basic_ui"
+            android:exported="false" />
+        <activity
+            android:name=".viewpager_tab.weather.MainWeather"
+            android:exported="false" />
+        <activity
+            android:name=".layout.Layout"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.main.DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.main.RecyclerViewMain"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="" />
+    </application>
+
+</manifest>

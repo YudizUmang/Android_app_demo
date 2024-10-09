@@ -1,0 +1,10 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Android_app_demo" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">#FF6500</item>
+        <item name="colorAccent">#0B192C</item>
+        <item name="colorPrimaryDark">#1E3E62</item>
+
+    </style>
+</resources>

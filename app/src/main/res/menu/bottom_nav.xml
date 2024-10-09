@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/imHome"
+        android:icon="@drawable/baseline_home_filled_24"
+        android:title="@string/home_text"
+       />
+
+    <item
+        android:id="@+id/imSearch"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/search_text"
+        />
+
+    <item
+        android:id="@+id/imProfile"
+        android:icon="@drawable/baseline_self_improvement_24"
+        android:title="@string/profile_text"
+        />
+
+    <item
+        android:id="@+id/imBlank"
+        android:title="" />
+</menu>
