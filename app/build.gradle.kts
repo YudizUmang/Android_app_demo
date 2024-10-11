@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.androidx.webkit)
     implementation(libs.play.services.maps)
     implementation(libs.play.services.location)
+    implementation(libs.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

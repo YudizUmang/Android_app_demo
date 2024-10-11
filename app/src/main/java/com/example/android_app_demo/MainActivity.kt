@@ -23,6 +23,7 @@ import com.example.android_app_demo.fab_snackbar.FabSnackMain
 import com.example.android_app_demo.fontdemo.FontMain
 import com.example.android_app_demo.form.FormActivity
 import com.example.android_app_demo.fragments.FragmentMain
+import com.example.android_app_demo.image_upload.UploadImageActivity
 import com.example.android_app_demo.layout.Layout
 import com.example.android_app_demo.map.MapActivity
 import com.example.android_app_demo.menu.MenuDemo
@@ -79,6 +80,7 @@ class MainActivity : AppCompatActivity() {
         val theme_btn = findViewById<Button>(R.id.theme_btn)
         val map_btn = findViewById<Button>(R.id.map_btn)
         val data_btn = findViewById<Button>(R.id.data_btn)
+        val image_upload_retrofit = findViewById<Button>(R.id.img_upload_retrofit)
 
         sharedPref = applicationContext.getSharedPreferences("MyTheme", 0)
 
@@ -297,6 +299,10 @@ class MainActivity : AppCompatActivity() {
 
         data_btn.setOnClickListener {
             startActivity(Intent(this, DataBinding::class.java))
+        }
+
+        image_upload_retrofit.setOnClickListener {
+            startActivity(Intent(this, UploadImageActivity::class.java))
         }
     }
 }

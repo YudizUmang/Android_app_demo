@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.example.permissiondemo.permission.ACCESS" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
 
     <application
         android:allowBackup="true"
@@ -18,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_app_demo"
         tools:targetApi="31">
+        <activity
+            android:name=".image_upload.UploadImageActivity"
+            android:exported="false" />
         <activity
             android:name=".data_binding.DataBinding"
             android:exported="false" />
