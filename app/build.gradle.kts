@@ -77,5 +77,6 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics:22.1.2")
     implementation("com.google.firebase:firebase-common-ktx:21.0.0")
     implementation("com.google.firebase:firebase-database-ktx:21.0.0")
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
 }

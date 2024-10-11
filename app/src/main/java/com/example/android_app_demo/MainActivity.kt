@@ -27,6 +27,7 @@ import com.example.android_app_demo.image_upload.UploadImageActivity
 import com.example.android_app_demo.layout.Layout
 import com.example.android_app_demo.map.MapActivity
 import com.example.android_app_demo.menu.MenuDemo
+import com.example.android_app_demo.mvvm.view.ProductDisplay
 import com.example.android_app_demo.permissions.PermissionMain
 import com.example.android_app_demo.recyclerview.main.RecyclerViewMain
 import com.example.android_app_demo.retrofit.UserMain
@@ -81,6 +82,7 @@ class MainActivity : AppCompatActivity() {
         val map_btn = findViewById<Button>(R.id.map_btn)
         val data_btn = findViewById<Button>(R.id.data_btn)
         val image_upload_retrofit = findViewById<Button>(R.id.img_upload_retrofit)
+        val mvvm = findViewById<Button>(R.id.mvvm)
 
         sharedPref = applicationContext.getSharedPreferences("MyTheme", 0)
 
@@ -303,6 +305,10 @@ class MainActivity : AppCompatActivity() {
 
         image_upload_retrofit.setOnClickListener {
             startActivity(Intent(this, UploadImageActivity::class.java))
+        }
+
+        mvvm.setOnClickListener {
+            startActivity(Intent(this, ProductDisplay::class.java))
         }
     }
 }
