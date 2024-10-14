@@ -19,10 +19,14 @@ class MainViewModel(private val repo: DataRepository) : ViewModel() {
 //    val productData: LiveData<MutableList<Product>> get() = _productData
 
     fun displayProductVm(context: Context) {
-        viewModelScope.launch {
-            val products = repo.displayProduct(context)
-            Log.d("displayProduct", products.toString())
-            productData.postValue(products)
+        if (productData.value != null) {
+            return
+        } else {
+            viewModelScope.launch {
+                val products = repo.displayProduct(context)
+                Log.d("displayProduct", products.toString())
+                productData.postValue(products)
+            }
         }
 
     }

@@ -3,12 +3,18 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("com.google.gms.google-services")
+    id("com.google.dagger.hilt.android")
 }
 val mapsApiKey: String? = project.findProperty("MAPS_API_KEY") as String?
 
 android {
     namespace = "com.example.android_app_demo"
     compileSdk = 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
 
@@ -45,7 +51,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -78,5 +83,12 @@ dependencies {
     implementation("com.google.firebase:firebase-common-ktx:21.0.0")
     implementation("com.google.firebase:firebase-database-ktx:21.0.0")
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
+}
+
+kapt {
+    correctErrorTypes = true
 }

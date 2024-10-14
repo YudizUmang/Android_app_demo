@@ -2,6 +2,7 @@ package com.example.android_app_demo.mvvm.view
 
 import DataRepository
 import android.os.Bundle
+import android.widget.ProgressBar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -17,6 +18,7 @@ import com.example.android_app_demo.mvvm.view.adapter.ProductAdapter
 import com.example.android_app_demo.mvvm.viewmodel.MainViewModel
 import com.example.android_app_demo.mvvm.viewmodel.MainViewModelFactory
 
+
 class ProductDisplay : AppCompatActivity() {
     private lateinit var apiService: ProductApi
 
@@ -26,6 +28,10 @@ class ProductDisplay : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
     private lateinit var recyclerView: RecyclerView
     private lateinit var productAdapter: ProductAdapter
+    private lateinit var progressBar: ProgressBar
+    private lateinit var manager: LinearLayoutManager
+
+    //    var isScrolling = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -43,12 +49,34 @@ class ProductDisplay : AppCompatActivity() {
         viewModel.displayProductVm(this)
 
         recyclerView = findViewById(R.id.product_list)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        progressBar = findViewById(R.id.progress)
+        manager = LinearLayoutManager(this)
+        recyclerView.layoutManager = manager
 
         viewModel.productData.observe(this, Observer { products ->
             productAdapter = ProductAdapter(this, products)
             recyclerView.adapter = productAdapter
+
         })
+//        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+//                super.onScrollStateChanged(recyclerView, newState)
+//                if (newState == AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {
+//                    isScrolling = true
+//                }
+//            }
+//
+//            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+//                super.onScrolled(recyclerView, dx, dy)
+//                val currentItems = manager.childCount
+//                val totalItems = manager.getItemCount()
+//                val scrollOutItems = manager.findFirstVisibleItemPosition()
+//
+//                if (isScrolling && ((currentItems + scrollOutItems) == totalItems)) {
+//                    isScrolling = false
+//                }
+//            }
+//        })
 
     }
 }

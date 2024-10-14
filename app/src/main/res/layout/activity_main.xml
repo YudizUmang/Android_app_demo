@@ -240,5 +240,12 @@
             android:layout_margin="5dp"
             android:text="MVVM" />
 
+        <Button
+            android:id="@+id/hilt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="HILT 1" />
+
     </LinearLayout>
 </ScrollView>

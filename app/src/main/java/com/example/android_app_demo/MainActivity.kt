@@ -23,6 +23,7 @@ import com.example.android_app_demo.fab_snackbar.FabSnackMain
 import com.example.android_app_demo.fontdemo.FontMain
 import com.example.android_app_demo.form.FormActivity
 import com.example.android_app_demo.fragments.FragmentMain
+import com.example.android_app_demo.hilt1.view.HiltActivity
 import com.example.android_app_demo.image_upload.UploadImageActivity
 import com.example.android_app_demo.layout.Layout
 import com.example.android_app_demo.map.MapActivity
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
+        Log.d("MainActivity", "Main")
 
         setContentView(R.layout.activity_main)
         val basic_ui_btn = findViewById<Button>(R.id.basic_ui)
@@ -83,6 +84,7 @@ class MainActivity : AppCompatActivity() {
         val data_btn = findViewById<Button>(R.id.data_btn)
         val image_upload_retrofit = findViewById<Button>(R.id.img_upload_retrofit)
         val mvvm = findViewById<Button>(R.id.mvvm)
+        val hilt1 = findViewById<Button>(R.id.hilt1)
 
         sharedPref = applicationContext.getSharedPreferences("MyTheme", 0)
 
@@ -309,6 +311,10 @@ class MainActivity : AppCompatActivity() {
 
         mvvm.setOnClickListener {
             startActivity(Intent(this, ProductDisplay::class.java))
+        }
+
+        hilt1.setOnClickListener {
+            startActivity(Intent(this, HiltActivity::class.java))
         }
     }
 }
