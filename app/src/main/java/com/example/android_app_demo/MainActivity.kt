@@ -24,6 +24,7 @@ import com.example.android_app_demo.fontdemo.FontMain
 import com.example.android_app_demo.form.FormActivity
 import com.example.android_app_demo.fragments.FragmentMain
 import com.example.android_app_demo.hilt1.view.HiltActivity
+import com.example.android_app_demo.hilt2.view.Hilt2Activity
 import com.example.android_app_demo.image_upload.UploadImageActivity
 import com.example.android_app_demo.layout.Layout
 import com.example.android_app_demo.map.MapActivity
@@ -85,6 +86,7 @@ class MainActivity : AppCompatActivity() {
         val image_upload_retrofit = findViewById<Button>(R.id.img_upload_retrofit)
         val mvvm = findViewById<Button>(R.id.mvvm)
         val hilt1 = findViewById<Button>(R.id.hilt1)
+        val hilt2 = findViewById<Button>(R.id.hilt2)
 
         sharedPref = applicationContext.getSharedPreferences("MyTheme", 0)
 
@@ -315,6 +317,10 @@ class MainActivity : AppCompatActivity() {
 
         hilt1.setOnClickListener {
             startActivity(Intent(this, HiltActivity::class.java))
+        }
+
+        hilt2.setOnClickListener {
+            startActivity(Intent(this, Hilt2Activity::class.java))
         }
     }
 }

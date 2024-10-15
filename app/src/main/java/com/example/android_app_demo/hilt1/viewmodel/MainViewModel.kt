@@ -12,6 +12,5 @@ class MainViewModel @Inject constructor(private val repo: Repository) : ViewMode
         Log.d("ViewModel", "GetData")
         val data = repo.fecthData()
         return data
-
     }
 }

@@ -247,5 +247,12 @@
             android:layout_margin="5dp"
             android:text="HILT 1" />
 
+        <Button
+            android:id="@+id/hilt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="HILT 2" />
+
     </LinearLayout>
 </ScrollView>

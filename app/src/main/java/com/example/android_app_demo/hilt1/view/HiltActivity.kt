@@ -13,12 +13,10 @@ import dagger.hilt.android.AndroidEntryPoint
 class HiltActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val viewModel: MainViewModel by viewModels()
-
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_hilt)
         val text = findViewById<TextView>(R.id.display_text)
         text.text = viewModel.getData()
-
     }
 }
